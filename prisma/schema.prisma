@@ -1,4 +1,3 @@
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -36,7 +35,7 @@ model BarbershopService {
   imageUrl     String
   price        Decimal    @db.Decimal(10, 2)
   barbershopId String
-  Barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
+  barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
   bookings     Booking[]
 }
 
